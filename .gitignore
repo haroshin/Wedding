@@ -1,0 +1,30 @@
+# Node dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Local env files (secrets)
+.env
+.env.local
+server/.env
+server/.env.local
+
+# Production build output
+dist/
+client/dist/
+
+# Local databases/fallbacks
+server/db_fallback.json
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db

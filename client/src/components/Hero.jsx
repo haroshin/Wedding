@@ -66,7 +66,7 @@ const Hero = () => {
 
         {/* Date & Location */}
         <p className="font-sans text-sm sm:text-base tracking-[0.2em] text-wedding-cream uppercase mb-12 animate-cascade-4">
-          December 20–21, 2026 &bull; Bengaluru, India
+          December 20–21, 2026 &bull; Kozhikode, Kerala
         </p>
 
         {/* Countdown Timer */}

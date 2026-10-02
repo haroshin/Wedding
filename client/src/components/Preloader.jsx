@@ -7,9 +7,9 @@ const Preloader = ({ onComplete }) => {
     let completeTimer;
     const timer = setTimeout(() => {
       setFadeOut(true);
-      // Wait for the css fade-out transition to complete
-      completeTimer = setTimeout(onComplete, 800);
-    }, 2200);
+      // Wait 400ms for smooth fade-out (1.6s + 0.4s = 2.0s total)
+      completeTimer = setTimeout(onComplete, 400);
+    }, 1600);
 
     return () => {
       clearTimeout(timer);
@@ -19,7 +19,7 @@ const Preloader = ({ onComplete }) => {
 
 
   return (
-    <div className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-wedding-primary transition-all duration-700 ease-in-out ${
+    <div className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-wedding-primary transition-all duration-400 ease-in-out ${
       fadeOut ? 'opacity-0 scale-105 pointer-events-none' : 'opacity-100 scale-100'
     }`}>
       {/* Decorative Golden Corners */}

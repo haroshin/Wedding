@@ -51,7 +51,7 @@ function App() {
           </p>
           <div className="w-16 h-[1px] bg-wedding-accent/40 mx-auto mb-8" />
           <p className="font-sans text-[11px] tracking-[0.2em] text-wedding-cream/60 uppercase">
-            Sharun & Niveditha &bull; December 18, 2026 &bull; Bengaluru
+            Sharun & Niveditha &bull; December 21, 2026 &bull; Bengaluru
           </p>
           <p className="font-sans text-[9px] tracking-widest text-wedding-cream/40 uppercase mt-4">
             &copy; {new Date().getFullYear()} All Rights Reserved. Created with love.

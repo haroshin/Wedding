@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
-  // Target date: Dec 20, 2026 at 9:00 AM
-  const targetDate = new Date('2026-12-20T09:00:00').getTime();
+  // Target date: Dec 21, 2026 at 12:00 PM
+  const targetDate = new Date('2026-12-21T12:00:00').getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -66,7 +66,7 @@ const Hero = () => {
 
         {/* Date & Location */}
         <p className="font-sans text-sm sm:text-base tracking-[0.2em] text-wedding-cream uppercase mb-12 animate-cascade-4">
-          December 20, 2026 &bull; Bangalore, India
+          December 21, 2026 &bull; Bengaluru, India
         </p>
 
         {/* Countdown Timer */}
@@ -116,7 +116,7 @@ const Hero = () => {
 
       {/* Floating Animated Scroll Down Arrow */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
-        <a href="#story" className="text-wedding-accent hover:text-wedding-ivory transition-colors duration-300">
+        <a href="#details" className="text-wedding-accent hover:text-wedding-ivory transition-colors duration-300">
           <svg
             className="w-6 h-6 animate-bounce"
             fill="none"

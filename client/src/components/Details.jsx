@@ -4,12 +4,12 @@ const Details = () => {
   const events = [
     {
       title: "Wedding Ceremony (Muhurtham)",
-      time: "9:00 AM - 10:30 AM",
-      date: "Sunday, December 20, 2026",
-      venue: "Royal Orchid Gardens, Palace Road, Vasanth Nagar, Bengaluru, Karnataka 560052",
+      time: "12:00 PM - 12:30 PM",
+      date: "Monday, December 21, 2026",
+      venue: "Bengaluru, Karnataka",
       dressCode: "Traditional Indian Attire (Veshti, Kurta, Saree)",
       mapUrl: "https://maps.app.goo.gl/Ae6d4YvwwsSfuuVv5",
-      calendarUrl: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Wedding Ceremony (Muhurtham) - Sharun & Niveditha")}&dates=20261220T033000Z/20261220T050000Z&details=You+are+invited+to+witness+the+marriage+ceremony+of+Sharun+%26+Niveditha&location=${encodeURIComponent("Bengaluru")}`,
+      calendarUrl: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Wedding Ceremony (Muhurtham) - Sharun & Niveditha")}&dates=20261221T063000Z/20261221T070000Z&details=You+are+invited+to+witness+the+marriage+ceremony+of+Sharun+%26+Niveditha&location=${encodeURIComponent("Bengaluru")}`,
       icon: (
         <svg className="w-8 h-8 text-wedding-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 5a7 7 0 100 14 7 7 0 000-14z" />
@@ -18,12 +18,12 @@ const Details = () => {
     },
     {
       title: "Grand Reception",
-      time: "6:30 PM Onwards",
-      date: "Sunday, December 20, 2026",
+      time: "3:30 PM Onwards",
+      date: "Monday, December 21, 2026",
       venue: "Bengaluru, Karnataka",
       dressCode: "Formal Wear / Indo-Western / Tuxedo",
       mapUrl: "https://maps.app.goo.gl/Ae6d4YvwwsSfuuVv5",
-      calendarUrl: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Grand Reception - Sharun & Niveditha")}&dates=20261220T130000Z/20261220T180000Z&details=Join+us+for+an+evening+of+dinner%2C+dancing%2C+and+celebration+of+Sharun+%26+Niveditha&location=${encodeURIComponent("Bengaluru")}`,
+      calendarUrl: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Grand Reception - Sharun & Niveditha")}&dates=20261221T100000Z/20261221T150000Z&details=Join+us+for+an+evening+of+dinner%2C+dancing%2C+and+celebration+of+Sharun+%26+Niveditha&location=${encodeURIComponent("Bengaluru")}`,
       icon: (
         <svg className="w-8 h-8 text-wedding-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />

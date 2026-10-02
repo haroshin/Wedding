@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Story from './components/Story';
 import Details from './components/Details';
 import Gallery from './components/Gallery';
 import RSVP from './components/Rsvp';
@@ -25,7 +24,6 @@ function App() {
       {/* Main Sections */}
       <main>
         <Hero />
-        <Story />
         <Details />
         <Gallery />
         <RSVP />

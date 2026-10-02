@@ -20,7 +20,7 @@ const Details = () => {
       time: "3:30 PM Onwards",
       date: "Monday, December 21, 2026",
       venue: "Groom's Residence",
-      mapUrl: "https://maps.app.goo.gl/nonwyQhDEAhB9UQh7",
+      mapUrl: "https://maps.app.goo.gl/kHpEoppJRcBKDLvM8",
       calendarUrl: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Grand Reception - Sharun & Niveditha")}&dates=20261221T100000Z/20261221T150000Z&details=Join+us+for+an+evening+of+dinner%2C+dancing%2C+and+celebration+of+Sharun+%26+Niveditha&location=${encodeURIComponent("Groom's Residence")}`,
       icon: (
         <svg className="w-8 h-8 text-wedding-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,7 +135,7 @@ const Details = () => {
             </a>
 
             <a
-              href="https://maps.app.goo.gl/nonwyQhDEAhB9UQh7"
+              href="https://maps.app.goo.gl/kHpEoppJRcBKDLvM8"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 py-3 bg-wedding-primary hover:bg-wedding-secondary text-wedding-cream font-sans text-xs tracking-widest font-semibold uppercase rounded-full transition-all duration-300 shadow-md hover:-translate-y-0.5"

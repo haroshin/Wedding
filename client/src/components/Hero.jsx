@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
-  // Target date: Dec 21, 2026 at 12:00 PM
-  const targetDate = new Date('2026-12-21T12:00:00').getTime();
+  // Target date: Dec 20, 2026 at 12:00 PM (Muhurtham)
+  const targetDate = new Date('2026-12-20T12:00:00').getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -66,7 +66,7 @@ const Hero = () => {
 
         {/* Date & Location */}
         <p className="font-sans text-sm sm:text-base tracking-[0.2em] text-wedding-cream uppercase mb-12 animate-cascade-4">
-          December 21, 2026 &bull; Bengaluru, India
+          December 20–21, 2026 &bull; Bengaluru, India
         </p>
 
         {/* Countdown Timer */}

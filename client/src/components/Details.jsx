@@ -5,11 +5,11 @@ const Details = () => {
     {
       title: "Wedding Ceremony (Muhurtham)",
       time: "12:00 PM - 12:30 PM",
-      date: "Monday, December 21, 2026",
+      date: "Sunday, December 20, 2026",
       venue: "Bengaluru, Karnataka",
       dressCode: "Traditional Indian Attire (Veshti, Kurta, Saree)",
       mapUrl: "https://maps.app.goo.gl/Ae6d4YvwwsSfuuVv5",
-      calendarUrl: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Wedding Ceremony (Muhurtham) - Sharun & Niveditha")}&dates=20261221T063000Z/20261221T070000Z&details=You+are+invited+to+witness+the+marriage+ceremony+of+Sharun+%26+Niveditha&location=${encodeURIComponent("Bengaluru")}`,
+      calendarUrl: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent("Wedding Ceremony (Muhurtham) - Sharun & Niveditha")}&dates=20261220T063000Z/20261220T070000Z&details=You+are+invited+to+witness+the+marriage+ceremony+of+Sharun+%26+Niveditha&location=${encodeURIComponent("Bengaluru")}`,
       icon: (
         <svg className="w-8 h-8 text-wedding-accent mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 5a7 7 0 100 14 7 7 0 000-14z" />

@@ -55,9 +55,6 @@ function App() {
           <span className="font-serif text-3xl md:text-4xl text-wedding-accent block mb-6 font-semibold tracking-wider">
             S & N
           </span>
-          <p className="font-serif italic text-lg text-wedding-cream/90 max-w-md mx-auto mb-8 font-light">
-            "Therefore what God has joined together, let no one separate."
-          </p>
           <div className="w-16 h-[1px] bg-wedding-accent/40 mx-auto mb-8" />
           <p className="font-sans text-[11px] tracking-[0.2em] text-wedding-cream/60 uppercase">
             Sharun & Niveditha &bull; December 20–21, 2026 &bull; Kozhikode, Kerala

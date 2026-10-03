@@ -19,7 +19,7 @@ const Guestbook = () => {
         throw new Error('Failed to fetch guestbook wishes');
       }
       const data = await response.json();
-      setWishes(data);
+      setWishes(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error('Fetch guestbook error:', err);
       setWishes([]);
@@ -67,11 +67,11 @@ const Guestbook = () => {
       const newWish = await response.json();
       
       // Update local state by placing new wish at the top
-      setWishes((prev) => [newWish, ...prev]);
+      setWishes((prev) => Array.isArray(prev) ? [newWish, ...prev] : [newWish]);
       setFormData({ name: '', message: '' });
       setPostSuccess(true);
       
-      // Clear success notification after 3 seconds
+      // Clear success notification after 4 seconds
       setTimeout(() => setPostSuccess(false), 4000);
 
     } catch (err) {
@@ -82,8 +82,11 @@ const Guestbook = () => {
   };
 
   const formatDate = (dateString) => {
+    if (!dateString) return '';
+    const date = new Date(dateString);
+    if (isNaN(date.getTime())) return '';
     const options = { month: 'short', day: 'numeric', year: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
+    return date.toLocaleDateString('en-US', options);
   };
 
   return (

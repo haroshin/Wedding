@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Details from './components/Details';
 import Gallery from './components/Gallery';
-import Guestbook from './components/Guestbook';
 import MusicPlayer from './components/MusicPlayer';
 import Preloader from './components/Preloader';
 import InvitationCardModal from './components/InvitationCardModal';
@@ -30,7 +29,6 @@ function App() {
         <Hero onOpenInvitation={handleOpenInvitation} />
         <Details onOpenInvitation={handleOpenInvitation} />
         <Gallery />
-        <Guestbook />
       </main>
 
       {/* Floating Music player widget */}

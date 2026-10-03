@@ -21,7 +21,6 @@ const Navbar = ({ onOpenInvitation }) => {
     { name: 'Home', href: '#home' },
     { name: 'Details', href: '#details' },
     { name: 'Gallery', href: '#gallery' },
-    { name: 'Guestbook', href: '#guestbook' },
   ];
 
   return (

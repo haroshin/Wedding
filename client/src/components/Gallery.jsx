@@ -45,55 +45,60 @@ const Gallery = () => {
     <section id="gallery" className="py-24 bg-wedding-ivory relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
-        <div className="text-center mb-16">
-          <span className="font-sans text-xs tracking-[0.3em] text-wedding-accent uppercase font-medium">
-            Gallery
-          </span>
-          <h2 className="font-serif text-4xl sm:text-5xl text-wedding-primary mt-2 mb-4">
-            Pre-Wedding Moments
-          </h2>
-          <div className="flex items-center justify-center space-x-2">
-            <div className="w-8 h-[1px] bg-wedding-accent" />
-            <span className="text-wedding-accent text-lg">❦</span>
-            <div className="w-8 h-[1px] bg-wedding-accent" />
-          </div>
-        </div>
-
-        {/* Grid Images */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              onClick={() => setActiveImageIndex(index)}
-              className="group relative overflow-hidden rounded-2xl cursor-pointer border border-wedding-accent/10 shadow-sm hover:shadow-lg transition-all duration-500 bg-wedding-cream"
-            >
-              {/* Photo Box */}
-              <div className="aspect-[4/5] w-full overflow-hidden">
-                <img
-                  src={image.src}
-                  alt={image.caption}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:brightness-90"
-                  loading="lazy"
-                />
+        {/* Pre-Wedding Moments Grid (Controlled by FEATURE_FLAGS.SHOW_PRE_WEDDING_GALLERY) */}
+        {FEATURE_FLAGS.SHOW_PRE_WEDDING_GALLERY && (
+          <>
+            {/* Header */}
+            <div className="text-center mb-16">
+              <span className="font-sans text-xs tracking-[0.3em] text-wedding-accent uppercase font-medium">
+                Gallery
+              </span>
+              <h2 className="font-serif text-4xl sm:text-5xl text-wedding-primary mt-2 mb-4">
+                Pre-Wedding Moments
+              </h2>
+              <div className="flex items-center justify-center space-x-2">
+                <div className="w-8 h-[1px] bg-wedding-accent" />
+                <span className="text-wedding-accent text-lg">❦</span>
+                <div className="w-8 h-[1px] bg-wedding-accent" />
               </div>
-
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-wedding-primary/90 via-wedding-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10">
-                <span className="font-sans text-[10px] tracking-widest text-wedding-accent uppercase mb-1">
-                  {image.category}
-                </span>
-                <h4 className="font-serif text-lg text-wedding-ivory font-medium">
-                  {image.caption}
-                </h4>
-                <div className="w-8 h-[1px] bg-wedding-accent mt-3 transition-all duration-300 group-hover:w-16" />
-              </div>
-
-              {/* Frame Border Effect on hover */}
-              <div className="absolute inset-4 border border-wedding-accent/0 group-hover:border-wedding-accent/30 pointer-events-none transition-all duration-500 rounded-lg z-20" />
             </div>
-          ))}
-        </div>
+
+            {/* Grid Images */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {images.map((image, index) => (
+                <div
+                  key={index}
+                  onClick={() => setActiveImageIndex(index)}
+                  className="group relative overflow-hidden rounded-2xl cursor-pointer border border-wedding-accent/10 shadow-sm hover:shadow-lg transition-all duration-500 bg-wedding-cream"
+                >
+                  {/* Photo Box */}
+                  <div className="aspect-[4/5] w-full overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.caption}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:brightness-90"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-wedding-primary/90 via-wedding-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10">
+                    <span className="font-sans text-[10px] tracking-widest text-wedding-accent uppercase mb-1">
+                      {image.category}
+                    </span>
+                    <h4 className="font-serif text-lg text-wedding-ivory font-medium">
+                      {image.caption}
+                    </h4>
+                    <div className="w-8 h-[1px] bg-wedding-accent mt-3 transition-all duration-300 group-hover:w-16" />
+                  </div>
+
+                  {/* Frame Border Effect on hover */}
+                  <div className="absolute inset-4 border border-wedding-accent/0 group-hover:border-wedding-accent/30 pointer-events-none transition-all duration-500 rounded-lg z-20" />
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
         {/* Wedding Photos / Google Drive Album Section */}
         {FEATURE_FLAGS.SHOW_WEDDING_PHOTOS_ALBUM && (

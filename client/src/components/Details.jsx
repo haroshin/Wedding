@@ -1,6 +1,7 @@
 import React from 'react';
+import { FEATURE_FLAGS } from '../config/features';
 
-const Details = () => {
+const Details = ({ onOpenInvitation }) => {
   const events = [
     {
       title: "Wedding Ceremony (Muhurtham)",
@@ -42,11 +43,20 @@ const Details = () => {
           <h2 className="font-serif text-4xl sm:text-5xl text-wedding-primary mt-2 mb-4">
             Event Details & Location
           </h2>
-          <div className="flex items-center justify-center space-x-2">
+          <div className="flex items-center justify-center space-x-2 mb-6">
             <div className="w-8 h-[1px] bg-wedding-accent" />
             <span className="text-wedding-accent text-lg">❦</span>
             <div className="w-8 h-[1px] bg-wedding-accent" />
           </div>
+
+          {FEATURE_FLAGS.SHOW_PHYSICAL_INVITATION_CARD && (
+            <button
+              onClick={onOpenInvitation}
+              className="inline-flex items-center space-x-2 px-6 py-2.5 bg-wedding-primary hover:bg-wedding-secondary text-wedding-accent rounded-full text-xs font-semibold uppercase tracking-widest border border-wedding-accent/30 shadow-sm transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              <span>📜 View Official Physical Invitation Card</span>
+            </button>
+          )}
         </div>
 
         {/* Grid Cards */}

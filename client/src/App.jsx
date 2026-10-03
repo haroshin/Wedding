@@ -6,9 +6,14 @@ import Gallery from './components/Gallery';
 import Guestbook from './components/Guestbook';
 import MusicPlayer from './components/MusicPlayer';
 import Preloader from './components/Preloader';
+import InvitationCardModal from './components/InvitationCardModal';
+import { FEATURE_FLAGS } from './config/features';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [invitationOpen, setInvitationOpen] = useState(false);
+
+  const handleOpenInvitation = () => setInvitationOpen(true);
 
   return (
     <>
@@ -18,18 +23,26 @@ function App() {
       }`}>
 
       {/* Navigation */}
-      <Navbar />
+      <Navbar onOpenInvitation={handleOpenInvitation} />
 
       {/* Main Sections */}
       <main>
-        <Hero />
-        <Details />
+        <Hero onOpenInvitation={handleOpenInvitation} />
+        <Details onOpenInvitation={handleOpenInvitation} />
         <Gallery />
         <Guestbook />
       </main>
 
       {/* Floating Music player widget */}
       <MusicPlayer />
+
+      {/* Official Invitation Card Modal */}
+      {FEATURE_FLAGS.SHOW_PHYSICAL_INVITATION_CARD && (
+        <InvitationCardModal
+          isOpen={invitationOpen}
+          onClose={() => setInvitationOpen(false)}
+        />
+      )}
 
       {/* Footer */}
       <footer className="bg-wedding-primary py-16 border-t border-wedding-accent/20 relative overflow-hidden">

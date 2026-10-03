@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FEATURE_FLAGS } from '../config/features';
 
-const Navbar = () => {
+const Navbar = ({ onOpenInvitation }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -47,6 +48,16 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+
+            {/* Official Invitation Card Trigger */}
+            {FEATURE_FLAGS.SHOW_PHYSICAL_INVITATION_CARD && (
+              <button
+                onClick={onOpenInvitation}
+                className="px-4 py-1.5 border border-wedding-accent text-wedding-accent hover:bg-wedding-accent hover:text-wedding-primary rounded-full font-sans text-xs tracking-widest uppercase font-semibold transition-all duration-300 flex items-center space-x-1.5"
+              >
+                <span>📜 Invitation Card</span>
+              </button>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,6 +97,18 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+
+          {FEATURE_FLAGS.SHOW_PHYSICAL_INVITATION_CARD && (
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                onOpenInvitation();
+              }}
+              className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-wedding-accent hover:bg-wedding-secondary/50 uppercase tracking-wider flex items-center space-x-2"
+            >
+              <span>📜 Official Invitation Card</span>
+            </button>
+          )}
         </div>
       </div>
     </nav>

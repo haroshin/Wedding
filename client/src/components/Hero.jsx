@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FEATURE_FLAGS } from '../config/features';
 
-const Hero = () => {
+const Hero = ({ onOpenInvitation }) => {
   // Target date: Dec 20, 2026 at 12:00 PM (Muhurtham)
   const targetDate = new Date('2026-12-20T12:00:00').getTime();
 
@@ -105,13 +106,24 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Event Details Quick Button */}
-        <a
-          href="#details"
-          className="inline-block px-8 py-3 bg-wedding-accent hover:bg-wedding-goldMuted text-wedding-primary font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg hover:shadow-wedding-accent/20 transition-all duration-300 transform hover:-translate-y-0.5 animate-cascade-5"
-        >
-          View Event Details
-        </a>
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-cascade-5">
+          <a
+            href="#details"
+            className="w-full sm:w-auto px-8 py-3 bg-wedding-accent hover:bg-wedding-goldMuted text-wedding-primary font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg hover:shadow-wedding-accent/20 transition-all duration-300 transform hover:-translate-y-0.5"
+          >
+            View Event Details
+          </a>
+
+          {FEATURE_FLAGS.SHOW_PHYSICAL_INVITATION_CARD && (
+            <button
+              onClick={onOpenInvitation}
+              className="w-full sm:w-auto px-8 py-3 border-2 border-wedding-accent text-wedding-accent hover:bg-wedding-accent hover:text-wedding-primary font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+            >
+              <span>📜 View Official Invitation</span>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Floating Animated Scroll Down Arrow */}

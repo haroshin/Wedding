@@ -10,8 +10,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #faf6f0; /* Linen Cream */
-  color: #2d3748; /* Charcoal */
+  background-color: #F5EFE6; /* Warm Invitation Card Sand / Linen */
+  color: #2C1B1D; /* Deep Dark Sandalwood Charcoal */
   overflow-x: hidden;
 }
 
@@ -20,58 +20,58 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #faf6f0;
+  background: #F5EFE6;
 }
 ::-webkit-scrollbar-thumb {
-  background: #093A27; /* Imperial Emerald */
+  background: #4A151B; /* Deep Sandalwood Maroon */
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37; /* Gold */
+  background: #C59B27; /* Antique Gold */
 }
 
 /* Elegant Text Gradients */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #b8902c 0%, #d4af37 50%, #f6ee85 100%);
+  background: linear-gradient(135deg, #c59b27 0%, #d4af37 50%, #f6ee85 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.bg-emerald-gradient {
-  background: linear-gradient(135deg, #093A27 0%, #1b4d3e 100%);
+.bg-maroon-gradient {
+  background: linear-gradient(135deg, #4A151B 0%, #671A21 100%);
 }
 
 .bg-gold-gradient {
-  background: linear-gradient(135deg, #946f23 0%, #d4af37 50%, #b8902c 100%);
+  background: linear-gradient(135deg, #946f23 0%, #c59b27 50%, #d4af37 100%);
 }
 
-/* Glassmorphism Styles */
+/* Glassmorphism Styles matching Invitation Card Theme */
 .glass-nav {
-  background: rgba(9, 58, 39, 0.85); /* Semitransparent Emerald */
+  background: rgba(74, 21, 27, 0.92); /* Semitransparent Sandalwood Maroon */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Gold border */
+  border-bottom: 1px solid rgba(197, 155, 39, 0.25); /* Gold border */
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(249, 245, 238, 0.85); /* Light Cream */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(197, 155, 39, 0.2);
+  box-shadow: 0 4px 30px rgba(74, 21, 27, 0.05);
 }
 
 .glass-card-dark {
-  background: rgba(9, 58, 39, 0.95);
+  background: rgba(74, 21, 27, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(197, 155, 39, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Timeline Custom line */
 .timeline-line {
-  background: linear-gradient(to bottom, #d4af37 0%, #093A27 50%, #d4af37 100%);
+  background: linear-gradient(to bottom, #c59b27 0%, #4A151B 50%, #c59b27 100%);
 }
 
 /* Custom animation delay classes */
@@ -81,29 +81,29 @@ body {
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
 
-/* Cascade animations starting after preloader finishes */
+/* Cascade animations synced with preloader finish */
 .animate-cascade-1 {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 2200ms forwards;
+  animation: fadeInUp 0.8s ease-out 1200ms forwards;
 }
 .animate-cascade-2 {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 2400ms forwards;
+  animation: fadeInUp 0.8s ease-out 1400ms forwards;
 }
 .animate-cascade-3 {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 2600ms forwards;
+  animation: fadeInUp 0.8s ease-out 1600ms forwards;
 }
 .animate-cascade-4 {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 2800ms forwards;
+  animation: fadeInUp 0.8s ease-out 1800ms forwards;
 }
 .animate-cascade-5 {
   opacity: 0;
-  animation: fadeInUp 0.8s ease-out 3000ms forwards;
+  animation: fadeInUp 0.8s ease-out 2000ms forwards;
 }
 
-/* Explicit keyframes to prevent Tailwind compilation purging */
+/* Explicit keyframes */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -123,5 +123,3 @@ body {
     opacity: 1;
   }
 }
-
-

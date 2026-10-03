@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FEATURE_FLAGS } from '../config/features';
 
 const Gallery = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(null);
@@ -93,6 +94,50 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+        {/* Wedding Photos / Google Drive Album Section */}
+        {FEATURE_FLAGS.SHOW_WEDDING_PHOTOS_ALBUM && (
+          <div className="mt-16 max-w-4xl mx-auto bg-wedding-primary border border-wedding-accent/30 rounded-3xl p-8 sm:p-10 shadow-xl text-center relative overflow-hidden">
+            {/* Decorative background glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-wedding-accent/10 rounded-full blur-3xl pointer-events-none" />
+
+            <span className="font-sans text-xs tracking-[0.3em] text-wedding-accent uppercase font-medium block mb-2">
+              Official Memories
+            </span>
+            <h3 className="font-serif text-3xl sm:text-4xl text-wedding-ivory font-semibold mb-4">
+              Wedding Day Photo Album
+            </h3>
+
+            {FEATURE_FLAGS.GOOGLE_DRIVE_ALBUM_URL ? (
+              <div>
+                <p className="font-sans text-wedding-cream/80 text-sm max-w-lg mx-auto mb-6 leading-relaxed">
+                  Access all high-resolution photos and videos from Sharun & Niveditha's wedding on Google Drive.
+                </p>
+                <a
+                  href={FEATURE_FLAGS.GOOGLE_DRIVE_ALBUM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-3 px-8 py-3.5 bg-wedding-accent hover:bg-wedding-goldMuted text-wedding-primary font-sans text-xs tracking-widest font-semibold uppercase rounded-full shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  <svg className="w-5 h-5 text-wedding-primary" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/>
+                  </svg>
+                  <span>Open Google Drive Album</span>
+                </a>
+              </div>
+            ) : (
+              <div>
+                <div className="inline-flex items-center space-x-2 px-5 py-2 bg-wedding-accent/15 border border-wedding-accent/30 rounded-full text-wedding-accent text-xs font-sans tracking-widest uppercase mb-4">
+                  <span className="w-2 h-2 rounded-full bg-wedding-accent animate-ping" />
+                  <span>Coming Soon — Google Drive Album</span>
+                </div>
+                <p className="font-sans text-wedding-cream/70 text-sm max-w-lg mx-auto leading-relaxed">
+                  High-resolution wedding ceremony & reception photos will be uploaded here after the celebrations. Stay tuned!
+                </p>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Fullscreen Lightbox Modal */}

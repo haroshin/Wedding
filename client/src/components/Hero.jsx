@@ -40,67 +40,67 @@ const Hero = ({ onOpenInvitation }) => {
       className="relative h-screen w-full flex items-center justify-center bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: "url('/wedding_hero.png')" }}
     >
-      {/* Premium Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-wedding-primary/60 to-wedding-primary/90 z-10" />
+      {/* Premium Soft Warm Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-wedding-maroonDark/40 to-wedding-cream/90 z-10" />
 
       {/* Hero Content */}
       <div className="relative z-20 text-center max-w-4xl px-4 flex flex-col items-center justify-center">
         
         {/* Subtitle */}
-        <span className="font-sans text-xs sm:text-sm tracking-[0.3em] text-wedding-accent uppercase mb-4 font-medium animate-cascade-1">
-          Save the Date
+        <span className="font-sans text-xs sm:text-sm tracking-[0.3em] text-wedding-primary uppercase mb-4 font-semibold animate-cascade-1">
+          || Save the Date ||
         </span>
 
         {/* Title / Names */}
         <h1 className="font-serif text-5xl sm:text-7xl md:text-8xl text-wedding-ivory mb-6 tracking-wide drop-shadow-lg animate-cascade-2">
-          Sharun <span className="text-wedding-accent">&</span> Niveditha
+          Sharun <span className="text-wedding-primary">&</span> Niveditha
         </h1>
 
         {/* Line Decoration */}
         <div className="flex items-center justify-center space-x-4 mb-6 animate-cascade-3">
-          <div className="w-12 h-[1px] bg-wedding-accent/50" />
-          <span className="font-serif italic text-lg sm:text-xl text-wedding-accent font-light">
+          <div className="w-12 h-[1px] bg-wedding-primary/60" />
+          <span className="font-serif italic text-lg sm:text-xl text-wedding-primary font-medium">
             Are getting married
           </span>
-          <div className="w-12 h-[1px] bg-wedding-accent/50" />
+          <div className="w-12 h-[1px] bg-wedding-primary/60" />
         </div>
 
         {/* Date & Location */}
-        <p className="font-sans text-sm sm:text-base tracking-[0.2em] text-wedding-cream uppercase mb-12 animate-cascade-4">
+        <p className="font-sans text-sm sm:text-base tracking-[0.2em] text-wedding-ivory uppercase mb-12 font-medium animate-cascade-4 drop-shadow">
           December 20–21, 2026 &bull; Kozhikode, Kerala
         </p>
 
         {/* Countdown Timer */}
-        <div className="grid grid-cols-4 gap-2 sm:gap-6 bg-wedding-primary/40 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-wedding-accent/30 shadow-xl max-w-lg w-full mb-12 animate-cascade-5">
+        <div className="grid grid-cols-4 gap-2 sm:gap-6 bg-wedding-maroonDark/80 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-wedding-primary/40 shadow-2xl max-w-lg w-full mb-12 animate-cascade-5">
           <div className="flex flex-col items-center">
-            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-accent">
+            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-primary">
               {String(timeLeft.days).padStart(2, '0')}
             </span>
-            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/80 uppercase mt-1">
+            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/90 uppercase mt-1">
               Days
             </span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-accent">
+            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-primary">
               {String(timeLeft.hours).padStart(2, '0')}
             </span>
-            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/80 uppercase mt-1">
+            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/90 uppercase mt-1">
               Hours
             </span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-accent">
+            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-primary">
               {String(timeLeft.minutes).padStart(2, '0')}
             </span>
-            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/80 uppercase mt-1">
+            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/90 uppercase mt-1">
               Mins
             </span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-accent">
+            <span className="font-serif text-2xl sm:text-4xl font-bold text-wedding-primary">
               {String(timeLeft.seconds).padStart(2, '0')}
             </span>
-            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/80 uppercase mt-1">
+            <span className="font-sans text-[10px] sm:text-xs tracking-widest text-wedding-cream/90 uppercase mt-1">
               Secs
             </span>
           </div>
@@ -110,7 +110,7 @@ const Hero = ({ onOpenInvitation }) => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-cascade-5">
           <a
             href="#details"
-            className="w-full sm:w-auto px-8 py-3 bg-wedding-accent hover:bg-wedding-goldMuted text-wedding-primary font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg hover:shadow-wedding-accent/20 transition-all duration-300 transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto px-8 py-3 bg-wedding-accent hover:bg-wedding-maroon text-wedding-cream font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg hover:shadow-wedding-accent/30 transition-all duration-300 transform hover:-translate-y-0.5"
           >
             View Event Details
           </a>
@@ -118,7 +118,7 @@ const Hero = ({ onOpenInvitation }) => {
           {FEATURE_FLAGS.SHOW_PHYSICAL_INVITATION_CARD && (
             <button
               onClick={onOpenInvitation}
-              className="w-full sm:w-auto px-8 py-3 border-2 border-wedding-accent text-wedding-accent hover:bg-wedding-accent hover:text-wedding-primary font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+              className="w-full sm:w-auto px-8 py-3 bg-wedding-cream/95 hover:bg-wedding-ivory text-wedding-accent border-2 border-wedding-accent font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
             >
               <span>📜 View Official Invitation</span>
             </button>

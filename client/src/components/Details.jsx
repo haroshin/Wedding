@@ -148,14 +148,6 @@ const Details = () => {
           </div>
         </div>
 
-        {/* Accommodation / Travel note */}
-        <div className="mt-12 text-center max-w-2xl mx-auto glass-card p-6 rounded-2xl border border-wedding-accent/20">
-          <h4 className="font-serif text-lg text-wedding-primary font-semibold mb-2">Need Help with Accommodations?</h4>
-          <p className="font-sans text-wedding-charcoal/80 text-sm leading-relaxed">
-            If you are traveling from outside Bengaluru and need assistance with hotel bookings or transportation, please mention it in the RSVP form comments or contact the couple directly. We're happy to help!
-          </p>
-        </div>
-
       </div>
     </section>
   );

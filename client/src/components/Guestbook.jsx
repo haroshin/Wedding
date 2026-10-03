@@ -22,27 +22,7 @@ const Guestbook = () => {
       setWishes(data);
     } catch (err) {
       console.error('Fetch guestbook error:', err);
-      // Fallback with a few default mock messages if the server is offline or loading fails
-      setWishes([
-        {
-          _id: 'mock1',
-          name: 'Anjali Sharma',
-          message: 'Congratulations Sharun and Niveditha! Wishing you both a lifetime of happiness, laughter, and endless love.',
-          createdAt: new Date(Date.now() - 3600000 * 2).toISOString(),
-        },
-        {
-          _id: 'mock2',
-          name: 'Rahul & Meera',
-          message: 'Can\'t wait to celebrate with you guys in Bangalore! So happy for you two. Cheers to a beautiful journey ahead!',
-          createdAt: new Date(Date.now() - 3600000 * 5).toISOString(),
-        },
-        {
-          _id: 'mock3',
-          name: 'Uncle Suresh',
-          message: 'Blessings to the wonderful couple. May your married life be filled with understanding and bliss.',
-          createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
-        }
-      ]);
+      setWishes([]);
     } finally {
       setLoading(false);
     }

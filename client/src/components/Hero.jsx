@@ -105,12 +105,12 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* RSVP Quick Button */}
+        {/* Event Details Quick Button */}
         <a
-          href="#rsvp"
+          href="#details"
           className="inline-block px-8 py-3 bg-wedding-accent hover:bg-wedding-goldMuted text-wedding-primary font-sans text-sm tracking-widest font-semibold uppercase rounded-full shadow-lg hover:shadow-wedding-accent/20 transition-all duration-300 transform hover:-translate-y-0.5 animate-cascade-5"
         >
-          RSVP Now
+          View Event Details
         </a>
       </div>
 

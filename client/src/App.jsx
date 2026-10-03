@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Details from './components/Details';
 import Gallery from './components/Gallery';
-import RSVP from './components/Rsvp';
 import Guestbook from './components/Guestbook';
 import MusicPlayer from './components/MusicPlayer';
 import Preloader from './components/Preloader';
@@ -26,7 +25,6 @@ function App() {
         <Hero />
         <Details />
         <Gallery />
-        <RSVP />
         <Guestbook />
       </main>
 

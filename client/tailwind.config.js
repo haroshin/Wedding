@@ -7,43 +7,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        maroon: {
-          50: '#fdf4f4',
-          100: '#fbe7e7',
-          200: '#f7d3d4',
-          300: '#f0b2b4',
-          400: '#e4868a',
-          500: '#d35a60',
-          600: '#bd3d44',
-          700: '#9e2d33',
-          800: '#83282c',
-          900: '#6d2629',
-          950: '#4a151b', // Sandalwood Maroon from Physical Invitation Card
-        },
         gold: {
           50: '#fdfbeb',
           100: '#fbf7c3',
           200: '#f6ee85',
           300: '#efdf48',
           400: '#e5c91b',
-          500: '#d4af37', // Custom metallic gold
-          600: '#c59b27', // Brass Gold from Invitation Card Monogram & Diya
+          500: '#d4af37', // Royal Gold
+          600: '#c59b27', // Antique Brass Gold (Main Brand Highlight)
           700: '#946f23',
           800: '#755420',
           900: '#61441e',
           950: '#38240f',
         },
         wedding: {
-          primary: '#4A151B',      // Deep Royal Sandalwood Maroon (Physical Card Headings & Monogram)
-          secondary: '#671A21',    // Rich Crimson Mahogany
-          lightGreen: '#f4f7f2',   // Soft Garland Light Green
-          accent: '#C59B27',       // Antique Brass Gold (Card Diya Lamp & SN Monogram)
-          goldMuted: '#D4AF37',    // Warm Royal Gold
-          cream: '#F5EFE6',        // Soft Invitation Card Sand / Linen (Card Background)
-          ivory: '#F9F5EE',        // Light Cream (Card Inner Glow)
-          charcoal: '#2C1B1D',     // Dark Sandalwood Charcoal for text readability
-          maroonDark: '#350E13',   // Deep Dark Maroon for Navbars & Footers
-          leafGreen: '#3F532B',    // Traditional Banana Leaf Garland Green
+          primary: '#C59B27',      // Main Antique Brass Gold (Nilavilakku & Monogram)
+          secondary: '#D4AF37',    // Main Warm Royal Gold
+          cream: '#F5EFE6',        // Main Warm Linen Sand (Page Background)
+          ivory: '#F9F5EE',        // Main Light Sand Ivory (Card & Section Background)
+          accent: '#4A151B',       // Deep Sandalwood Maroon Accent
+          maroon: '#671A21',       // Rich Crimson Maroon
+          olive: '#3F532B',        // Garland Olive Green (Subtle Leaf & Botanical Accents)
+          leafGreen: '#3F532B',    // Garland Olive Green
+          goldMuted: '#B88E28',    // Muted Brass Gold
+          charcoal: '#2C1B1D',     // Dark Sandalwood Mahogany for text readability
+          maroonDark: '#350E13',   // Dark Maroon
         }
       },
       fontFamily: {
